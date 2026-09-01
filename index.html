@@ -3,16 +3,20 @@
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>Mphatso Kenani</title>
-  <meta name="description" content="Portfolio of Mphatso Kenani Electrical Engineering student and full-stack web developer.">
+  <title>Mphatso Kenani — Portfolio</title>
+  <meta name="description" content="Portfolio of Mphatso Kenani — Electrical Engineering student and full-stack web developer.">
+  <link rel="stylesheet" href="css/style.css">
 </head>
 <body>
+
   <header>
     <nav aria-label="Primary">
       <a href="index.html" class="brand">Mphatso Kenani</a>
+
       <button id="nav-toggle" aria-expanded="false" aria-controls="nav-links" aria-label="Toggle navigation menu">
         <span></span>
       </button>
+
       <ul id="nav-links">
         <li><a href="#about">About</a></li>
         <li><a href="#projects">Projects</a></li>
@@ -20,49 +24,56 @@
         <li><a href="#contact">Contact</a></li>
         <li><a href="cv.pdf" download>CV</a></li>
       </ul>
+
       <button id="theme-toggle" aria-label="Toggle light and dark theme">
         <span aria-hidden="true">🌙</span>
       </button>
     </nav>
   </header>
+
   <main>
+
     <!-- HERO -->
     <section id="hero" aria-labelledby="hero-heading">
       <div class="hero-text">
         <h1 id="hero-heading">Hi, I'm <span class="accent">Mphatso Kenani</span></h1>
         <p>
-          I'm an Electrical Engineering student and full-stack web developer,
-          experienced in managing complex data systems and building clean,
-          functional digital experiences. My work focuses on integrating
-          secure digital wallet technology and delivering scalable solutions
-          that empower modern applications.
+          I'm an Electrical Engineering student and frontend developer,
+          focused on getting the fundamentals genuinely right  semantic
+          HTML, responsive CSS layout, and accessible, well-tested
+          interfaces, not just something that looks finished at a glance.
         </p>
         <a href="#projects" class="btn">View My Work</a>
       </div>
-      <img src="assets/profile.jpg" alt="Portrait of Mphatso Kenani" class="hero-photo">
+      <img src="assets/mkenani.jpg" alt="Portrait of Mphatso Kenani" class="hero-photo">
     </section>
 
     <!-- ABOUT -->
     <section id="about" aria-labelledby="about-heading">
-      <h2 id="about-heading">About <span class="accent">Me</span></h2>
-      <p>
-        I'm an Electrical Engineering student with growing experience managing
-        complex data systems and building clean, functional digital
-        experiences. My work focuses on integrating secure digital wallet
-        technology and delivering scalable solutions that empower modern
-        applications. I enjoy solving problems at the intersection of data
-        integrity, security, and user experience — turning complex backend
-        logic into products people can actually rely on.
-      </p>
-
-      <div class="skills" aria-label="Skills, each linked to a project that demonstrates it">
-        <a href="projects/plant-nursery.html" class="skill-pill">CSS Flexbox</a>
-        <a href="projects/flag-of-malawi.html" class="skill-pill">CSS Positioning</a>
-        <a href="projects/bootstrap-portfolio.html" class="skill-pill">Bootstrap</a>
-        <a href="projects/plant-nursery.html" class="skill-pill">Semantic HTML</a>
-        <a href="article.html" class="skill-pill">Technical Writing</a>
-        <a href="#" class="skill-pill">JavaScript</a>
+      <div class="about-text">
+        <h2 id="about-heading">About <span class="accent">Me</span></h2>
+        <p>
+          I'm an Electrical Engineering student who's spent the past few
+          months going deep on frontend fundamentals  CSS layout systems,
+          accessibility, and component-based frameworks like Bootstrap. I
+          like the kind of problem where getting the details right (contrast
+          ratios, box-model math, why a layout breaks at a specific screen
+          width) actually matters, not just making something look finished.
+        </p>
       </div>
+
+      <div class="about-skills">
+        <h3>Skills</h3>
+        <div class="skills" aria-label="Skills, each linked to a project that demonstrates it">
+          <a href="projects/plant-nursery.html" class="skill-pill">CSS Flexbox</a>
+          <a href="projects/flag-of-malawi.html" class="skill-pill">CSS Positioning</a>
+          <a href="projects/bootstrap-portfolio.html" class="skill-pill">Bootstrap</a>
+          <a href="projects/plant-nursery.html" class="skill-pill">Semantic HTML</a>
+          <a href="article.html" class="skill-pill">Technical Writing</a>
+          <a href="#" class="skill-pill">JavaScript</a>
+        </div>
+      </div>
+    </section>
     </section>
 
     <!-- PROJECTS -->
@@ -109,7 +120,7 @@
     <!-- CONTACT -->
     <section id="contact" aria-labelledby="contact-heading">
       <h2 id="contact-heading">Let's Connect</h2>
-      <p>I'm open to new opportunities and collaborations, feel free to reach out.</p>
+      <p>I'm open to new opportunities and collaborations — feel free to reach out.</p>
 
       <form id="contact-form" novalidate>
         <div class="form-field">
