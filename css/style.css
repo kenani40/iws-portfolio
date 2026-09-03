@@ -55,7 +55,7 @@ a {
   color: var(--accent);
 }
 
-/* Visible focus state for keyboard users — required by the brief */
+
 a:focus-visible,
 button:focus-visible,
 input:focus-visible,
