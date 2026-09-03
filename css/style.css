@@ -1,9 +1,8 @@
-/* ============================================
-   CUSTOM PROPERTIES — design tokens
-   Light mode is the default (no attribute needed).
-   Dark mode activates via [data-theme="dark"] on <html>.
-   All values verified WCAG AA (>=4.5:1 for normal text).
-   ============================================ */
+
+* {
+  box-sizing: border-box;
+}
+
 
 :root {
   --bg: #F7F7F5;
@@ -38,14 +37,6 @@
   --border: #2A2A2A;
 }
 
-/* ============================================
-   RESET / BASE
-   ============================================ */
-
-* {
-  box-sizing: border-box;
-}
-
 body {
   margin: 0;
   font-family: var(--font-body);
@@ -53,16 +44,6 @@ body {
   color: var(--text-primary);
   line-height: 1.6;
   transition: background-color 0.2s ease, color 0.2s ease;
-}
-
-/* Respect reduced-motion preference — disable the theme transition
-   (and any future animation) for users who've asked for it. */
-@media (prefers-reduced-motion: reduce) {
-  * {
-    animation-duration: 0.001ms !important;
-    animation-iteration-count: 1 !important;
-    transition-duration: 0.001ms !important;
-  }
 }
 
 img {
