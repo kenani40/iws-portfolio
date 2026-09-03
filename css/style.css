@@ -326,7 +326,7 @@ nav {
   height: 180px;
   object-fit: cover;
   width: 100%;
-  margin: calc(var(--space-sm) * -1) calc(var(--space-sm) * -1) var(--space-sm);
+  margin-bottom:6px;
 }
 
 .project-card h3 {
