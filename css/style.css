@@ -189,7 +189,7 @@ nav {
 }
 
 .hero-photo {
-  order: -1; /* photo leads on mobile, regardless of source order in the HTML */
+  order: -1;
 }
 
 #hero h1 {
@@ -474,7 +474,7 @@ footer {
   }
 
   .hero-photo {
-    order: 0; /* reset — desktop layout puts it beside the text via flex row, not stacked order */
+    order: 0; 
     margin: 0;
   }
 

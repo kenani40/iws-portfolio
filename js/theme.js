@@ -1,6 +1,7 @@
- THEME_KEY = 'portfolio-theme';
+THEME_KEY = 'portfolio-theme';
 const root = document.documentElement;
 const themeToggle = document.getElementById('theme-toggle');
+
 function applyTheme(theme) {
   if (theme === 'dark') {
     root.setAttribute('data-theme', 'dark');
@@ -19,6 +20,8 @@ function getPreferredTheme() {
     return saved;
   }
 }
+
+// Apply the correct theme as soon as the script runs, before paint settles
 applyTheme(getPreferredTheme());
 themeToggle.addEventListener('click', () => {
   const isDark = root.getAttribute('data-theme') === 'dark';
