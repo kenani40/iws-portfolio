@@ -1,7 +1,6 @@
  THEME_KEY = 'portfolio-theme';
 const root = document.documentElement;
 const themeToggle = document.getElementById('theme-toggle');
-
 function applyTheme(theme) {
   if (theme === 'dark') {
     root.setAttribute('data-theme', 'dark');
@@ -20,9 +19,7 @@ function getPreferredTheme() {
     return saved;
   }
 }
-
 applyTheme(getPreferredTheme());
-
 themeToggle.addEventListener('click', () => {
   const isDark = root.getAttribute('data-theme') === 'dark';
   const newTheme = isDark ? 'light' : 'dark';
