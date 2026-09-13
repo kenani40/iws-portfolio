@@ -21,7 +21,6 @@ function getPreferredTheme() {
   }
 }
 
-// Apply the correct theme as soon as the script runs, before paint settles
 applyTheme(getPreferredTheme());
 themeToggle.addEventListener('click', () => {
   const isDark = root.getAttribute('data-theme') === 'dark';
