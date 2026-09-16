@@ -82,7 +82,7 @@ textarea:focus-visible {
 }
 
 /* ============================================
-   HEADER / NAV mobile-first
+   HEADER / NAV 
    ============================================ */
 
 header {
@@ -424,6 +424,43 @@ footer {
   color: var(--text-secondary);
   font-size: 0.85rem;
   border-top: 1px solid var(--border);
+}
+/* ============================================
+   GITHUB ACTIVITY
+   ============================================ */
+
+.github-activity {
+  margin-top: var(--space-lg);
+}
+
+.github-activity h3 {
+  margin-bottom: var(--space-sm);
+}
+
+#github-repos {
+  display: flex;
+  flex-wrap: wrap;
+  gap: var(--space-md);
+}
+
+#github-repos .project-card {
+  flex: 1 1 260px;
+}
+
+#github-repos .loading-text {
+  color: var(--text-secondary);
+  font-style: italic;
+}
+
+
+@media (max-width: 599px) {
+  #github-repos {
+    flex-direction: column;
+  }
+
+  #github-repos .project-card {
+    max-width: 100%;
+  }
 }
 
 /* ============================================

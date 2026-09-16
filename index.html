@@ -1,12 +1,15 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <title>Mphatso Kenani</title>
-  <meta name="description" content="Portfolio of Mphatso Kenani  Electrical Engineering student and full-stack web developer.">
+  <meta name="description"
+    content="Portfolio of Mphatso Kenani  Electrical Engineering student and full-stack web developer.">
   <link rel="stylesheet" href="css/style.css">
 </head>
+
 <body>
 
   <header>
@@ -35,7 +38,7 @@
         <h1 id="hero-heading">Hi, I'm <span class="accent">Mphatso Kenani</span></h1>
         <p>
           I'm an Electrical Engineering student and frontend developer,
-          focused on getting the fundamentals genuinely right  semantic
+          focused on getting the fundamentals genuinely right semantic
           HTML, responsive CSS layout, and accessible, well-tested
           interfaces, not just something that looks finished at a glance.
         </p>
@@ -50,7 +53,7 @@
         <h2 id="about-heading">About <span class="accent">Me</span></h2>
         <p>
           I'm an Electrical Engineering student who's spent the past few
-          months going deep on frontend fundamentals  CSS layout systems,
+          months going deep on frontend fundamentals CSS layout systems,
           accessibility, and component-based frameworks like Bootstrap. I
           like the kind of problem where getting the details right (contrast
           ratios, box-model math, why a layout breaks at a specific screen
@@ -80,7 +83,8 @@
         <article class="project-card">
           <img src="assets/nuserly.jpeg" alt="Screenshot of the Greenleaf Nursery landing page">
           <h3>Greenleaf Nursery Landing Page</h3>
-          <p>A group-built responsive landing page Flexbox layout, WCAG AA verified palette, and a real accessibility bug I owned and fixed.</p>
+          <p>A group-built responsive landing page Flexbox layout, WCAG AA verified palette, and a real accessibility
+            bug I owned and fixed.</p>
           <div class="tags">
             <span class="tag">HTML</span>
             <span class="tag">CSS</span>
@@ -88,22 +92,22 @@
           </div>
           <a href=" " class="view-project">View Project →</a>
         </article>
-
         <article class="project-card">
           <img src="assets/flag.png" alt="Screenshot of the pure-CSS Flag of Malawi">
           <h3>Flag of Malawi Pure CSS</h3>
-          <p>A pixel-precise recreation of the Malawi flag using only HTML and CSS, including 24 rotated sun rays computed with calc().</p>
+          <p>A pixel-precise recreation of the Malawi flag using only HTML and CSS, including 24 rotated sun rays
+            computed with calc().</p>
           <div class="tags">
             <span class="tag">CSS</span>
             <span class="tag">Positioning</span>
           </div>
           <a href=" " class="view-project">View Project →</a>
         </article>
-
         <article class="project-card">
           <img src="assets/bootstrap.png" alt="Screenshot of the Bootstrap portfolio lab page">
           <h3>Bootstrap Component Portfolio</h3>
-          <p>A responsive portfolio page assembled from Bootstrap components navbar, cards, badges, a dismissible alert, and a modal.</p>
+          <p>A responsive portfolio page assembled from Bootstrap components navbar, cards, badges, a dismissible alert,
+            and a modal.</p>
           <div class="tags">
             <span class="tag">Bootstrap</span>
             <span class="tag">Responsive</span>
@@ -111,45 +115,46 @@
           <a href=" " class="view-project">View Project →</a>
         </article>
       </div>
+      <div class="github-activity">
+        <h3>Latest on GitHub</h3>
+        <div id="github-repos" aria-live="polite">
+          <p class="loading-text">Loading recent repositories…</p>
+        </div>
+      </div>
     </section>
 
     <!-- CONTACT -->
     <section id="contact" aria-labelledby="contact-heading">
       <h2 id="contact-heading">Let's Connect</h2>
       <p>I'm open to new opportunities and collaborations, feel free to reach out.</p>
-
       <form id="contact-form" novalidate>
         <div class="form-field">
           <label for="name">Name</label>
           <input type="text" id="name" name="name" required>
           <p class="error-message" id="name-error" role="alert"></p>
         </div>
-
         <div class="form-field">
           <label for="email">Email</label>
           <input type="email" id="email" name="email" required>
           <p class="error-message" id="email-error" role="alert"></p>
         </div>
-
         <div class="form-field">
           <label for="message">Message</label>
           <textarea id="message" name="message" rows="5" required></textarea>
           <p class="error-message" id="message-error" role="alert"></p>
         </div>
-
         <button type="submit" class="btn">Send Message</button>
         <p class="form-status" id="form-status" role="status"></p>
       </form>
     </section>
-
   </main>
-
   <footer>
     <p>&copy; 2026 Mphatso Kenani.</p>
   </footer>
-
   <script src="js/theme.js"></script>
   <script src="js/nav.js"></script>
   <script src="js/form.js"></script>
+  <script src="js/github.js"></script>
 </body>
+
 </html>
