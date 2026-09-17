@@ -464,6 +464,100 @@ footer {
 }
 
 /* ============================================
+   404 PAGE
+   ============================================ */
+ 
+.not-found {
+  max-width: var(--max-width);
+  margin: 0 auto;
+  padding: var(--space-xl) var(--space-sm);
+  text-align: center;
+}
+ 
+.not-found-code {
+  font-size: 6rem;
+  font-weight: 700;
+  color: var(--accent);
+  margin: 0;
+  line-height: 1;
+}
+ 
+.not-found h1 {
+  margin: var(--space-sm) 0;
+}
+ 
+.not-found p {
+  color: var(--text-secondary);
+  max-width: 500px;
+  margin: 0 auto var(--space-md);
+}
+ 
+.not-found-links {
+  display: flex;
+  flex-direction: column;
+  gap: var(--space-sm);
+  align-items: center;
+  margin-top: var(--space-md);
+}
+ 
+@media (min-width: 600px) {
+  .not-found-links {
+    flex-direction: row;
+    justify-content: center;
+  }
+}
+/* ============================================
+   ARTICLE PAGE
+   ============================================ */
+ 
+.article {
+  max-width: 700px;
+  margin: 0 auto;
+  padding: var(--space-lg) var(--space-sm);
+}
+ 
+.article h1 {
+  font-size: 2rem;
+  margin-bottom: var(--space-xs);
+}
+ 
+.article-meta {
+  color: var(--text-secondary);
+  font-size: 0.9rem;
+  margin-bottom: var(--space-lg);
+}
+ 
+.article h2 {
+  margin-top: var(--space-lg);
+}
+ 
+.article p {
+  color: var(--text-primary);
+}
+ 
+.article code {
+  background: var(--bg-alt);
+  border: 1px solid var(--border);
+  border-radius: 4px;
+  padding: 0.1em 0.4em;
+  font-size: 0.9em;
+}
+ 
+.article pre {
+  background: var(--bg-alt);
+  border: 1px solid var(--border);
+  border-radius: var(--radius-sm);
+  padding: var(--space-sm);
+  overflow-x: auto;
+}
+ 
+.article pre code {
+  background: none;
+  border: none;
+  padding: 0;
+}
+ 
+/* ============================================
    BREAKPOINT 1 — TABLET (768px+)
    ============================================ */
 

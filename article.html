@@ -1,0 +1,133 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Article</title>
+    <meta
+      name="description"
+      content="A practical look at the CSS box model and why the border-box reset saves so many layout headaches."
+    />
+    <link rel="stylesheet" href="css/style.css" />
+  </head>
+  <body>
+    <header>
+      <nav aria-label="Primary">
+        <a href="index.html" class="brand">Mphatso Kenani</a>
+        <button
+          id="nav-toggle"
+          aria-expanded="false"
+          aria-controls="nav-links"
+          aria-label="Toggle navigation menu"
+        >
+          <span></span>
+        </button>
+        <ul id="nav-links">
+          <li><a href="index.html#about">About</a></li>
+          <li><a href="index.html#projects">Projects</a></li>
+          <li><a href="article.html">Article</a></li>
+          <li><a href="index.html#contact">Contact</a></li>
+          <li><a href="cv.pdf" download>CV</a></li>
+        </ul>
+        <button id="theme-toggle" aria-label="Toggle light and dark theme">
+          <span aria-hidden="true">🌙</span>
+        </button>
+      </nav>
+    </header>
+
+    <main class="article">
+      <article>
+        <h1>
+          Why box-sizing: border-box Should Be the First Line in Every
+          Stylesheet
+        </h1>
+        <p class="article-meta">Mphatso Kenani</p>
+        <p>
+          The first CSS bug I actually understood, not just fixed by trial and
+          error, but genuinely understood, was a box that was wider than I told
+          it to be. I'd written <code>width: 300px</code> on a card, added
+          <code>padding: 20px</code> for some breathing room, and the card
+          rendered at 340px wide. Not 300, not close to 300. I hadn't made an
+          arithmetic mistake; I'd misunderstood what <code>width</code>
+          actually means in CSS.
+        </p>
+
+        <h2>The default nobody tells you about</h2>
+        <p>
+          By default, every element in CSS uses what's called the
+          <code>content-box</code> model. Under this model, the
+          <code>width</code> you declare only applies to the element's content
+          area, the space where text and inner elements actually sit. Padding
+          and border are added <em>on top of</em> that number, not absorbed into
+          it. So my 300px card, with 20px of padding on the left and right,
+          became <code>300 + 20 + 20 = 340px</code> in its actual rendered
+          width. The border, if I'd had one, would have added even more.
+        </p>
+        <p>
+          This isn't a bug in the browser. It's the specified, correct behaviour
+          of <code>content-box</code>, it's just deeply unintuitive if you're
+          thinking of <code>width</code> the way most people naturally do: as
+          the total size of the box on screen.
+        </p>
+
+        <h2>The one-line fix</h2>
+        <p>
+          <code>box-sizing: border-box</code> changes what
+          <code>width</code> means. Under <code>border-box</code>, the width you
+          declare becomes the <em>total</em> rendered size — padding and border
+          are absorbed inside it, shrinking the available content area instead
+          of adding to the outside. My 300px card stays exactly 300px; the 20px
+          of padding on each side just eats into the space left for content,
+          rather than extending the box outward.
+        </p>
+        <p>
+          The fix is almost always applied globally, at the very top of a
+          stylesheet, using the universal selector:
+        </p>
+        <pre><code>* {
+  box-sizing: border-box;
+}</code></pre>
+        <p>
+          I've written this exact line at the top of every CSS file I've built
+          for this course, the plant nursery landing page, the pricing table
+          lab, this portfolio's own stylesheet. It's become such a reflex that I
+          now notice its absence in other people's code immediately, the same
+          way you notice a missing semicolon once you've been burned by one.
+        </p>
+
+        <h2>Where it actually bit me</h2>
+        <p>
+          The clearest example wasn't a card, it was a Flexbox row of three
+          pricing plan cards, each set to <code>flex: 1 1 280px</code>, sitting
+          inside a container with a fixed max-width. Without
+          <code>border-box</code>, adding padding to each card pushed the total
+          row width past the container, and instead of three neat columns, the
+          third card wrapped onto its own line — not because Flexbox was broken,
+          but because the numbers genuinely didn't add up anymore. Once I added
+          the reset, the exact same layout code started behaving the way I'd
+          originally designed it to.
+        </p>
+
+        <h2>Why this is worth writing about</h2>
+        <p>
+          It would be easy to treat this as a small technical footnote, one line
+          of CSS, quickly memorised, quickly forgotten why it matters. But I
+          think it's a good example of a more general lesson: a lot of
+          frustrating bugs in web development aren't really bugs. They're the
+          correct behaviour of a rule you don't yet know exists. The fix for
+          <code>box-sizing</code> is trivial once you understand the two
+          competing models. The hard part was ever noticing there were two
+          models in the first place, rather than just adding more padding and
+          hoping.
+        </p>
+      </article>
+    </main>
+
+    <footer>
+      <p>&copy; 2026 Mphatso Kenani.</p>
+    </footer>
+
+    <script src="js/theme.js"></script>
+    <script src="js/nav.js"></script>
+  </body>
+</html>
