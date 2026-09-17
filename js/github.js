@@ -9,7 +9,6 @@ function formatDate(isoString) {
     month: 'short',
   });
 }
-
 function renderRepoCard(repo) {
   const description = repo.description
     ? repo.description
@@ -33,7 +32,6 @@ function renderRepoCard(repo) {
     </article>
   `;
 }
-
 async function loadRepos() {
   try {
     const res = await fetch(`https://api.github.com/users/${GITHUB_USERNAME}/repos`);
@@ -46,7 +44,7 @@ async function loadRepos() {
     console.log('Fetched GitHub repos:', repos);
     const topRepos = repos
       .slice() // getting a shallow copy of the array
-      .sort((a, b) => new Date(b.updated_at) - new Date(a.updated_at))
+      .sort(( a, b) => new Date(b.updated_at) - new Date(a.updated_at))
       .slice(0, REPO_COUNT);
 
     if (topRepos.length === 0) {
