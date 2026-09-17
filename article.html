@@ -74,7 +74,7 @@
         <p>
           <code>box-sizing: border-box</code> changes what
           <code>width</code> means. Under <code>border-box</code>, the width you
-          declare becomes the <em>total</em> rendered size — padding and border
+          declare becomes the <em>total</em> rendered size, padding and border
           are absorbed inside it, shrinking the available content area instead
           of adding to the outside. My 300px card stays exactly 300px; the 20px
           of padding on each side just eats into the space left for content,
@@ -84,9 +84,12 @@
           The fix is almost always applied globally, at the very top of a
           stylesheet, using the universal selector:
         </p>
-        <pre><code>* {
-  box-sizing: border-box;
-}</code></pre>
+        <pre>
+         <code>* {
+         box-sizing: border-box;
+         }
+        </code>
+        </pre>
         <p>
           I've written this exact line at the top of every CSS file I've built
           for this course, the plant nursery landing page, the pricing table
