@@ -87,6 +87,22 @@ iws-portfolio/
 ![Mobile Lighthouse results](./screen_shots/Screenshot%202026-09-19%20095533.png)
 ![Desktop Lighthouse results](./screen_shots/Screenshot%202026-09-19%20095558.png)
 
+## W3C validator
+ ```bash
+ https://kenani40.github.io/iws-portfolio/
+ ```
+![](./screen_shots/Screenshot%202026-09-19%20145626.png)
+
+```bash
+https://kenani40.github.io/iws-portfolio/404.html
+ ```
+![](./screen_shots/Screenshot%202026-09-19%20145806.png)
+
+```bash
+https://kenani40.github.io/iws-portfolio/article.html
+ ```
+![](./screen_shots/Screenshot%202026-09-19%20150805.png)
+
 ## Credits
 
 All photography and project screenshots are my own. Typeface is
