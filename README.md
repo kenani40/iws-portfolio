@@ -103,6 +103,12 @@ https://kenani40.github.io/iws-portfolio/article.html
  ```
 ![](./screen_shots/Screenshot%202026-09-19%20150805.png)
 
+```bash
+CSS file
+
+ ```
+![css](./screen_shots/Screenshot%202026-09-19%20171451.png)
+
 ## Credits
 
 All photography and project screenshots are my own. Typeface is
