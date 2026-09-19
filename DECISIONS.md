@@ -1,6 +1,5 @@
 # Decision Log
 
-
 ## 1. Light mode as the default theme, not dark
 
 **Decision:** Made light mode (`#F7F7F5` background) the default, with dark
@@ -13,7 +12,6 @@ with every colour in the stylesheet routed through `var(--token-name)`.
 
 **Alternative considered:** A simpler `.dark-mode` class toggled on `<body>`,
 with dark-specific rules written separately (e.g. `.dark-mode .card { background: #1E1E1E }`).
-
 
 ## 3. Sorting GitHub repos by `updated_at` instead of showing "pinned" repos
 
