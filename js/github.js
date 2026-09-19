@@ -51,7 +51,6 @@ async function loadRepos() {
       REPOS_CONTAINER.innerHTML = '<p>No public repositories found.</p>';
       return;
     }
-     console.log('Top GitHub repos:', topRepos);
     REPOS_CONTAINER.innerHTML = topRepos.map(renderRepoCard).join('');
   } catch (error) {
     console.error('Failed to load GitHub repos:', error);
