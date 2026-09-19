@@ -77,6 +77,16 @@ iws-portfolio/
 - [`DECISIONS.md`](./DECISIONS.md): decision log
 - [`AI-NOTES.md`](./AI-NOTES.md): AI tool usage disclosure
 
+## Lighthouse Scores
+
+| | Performance | Accessibility | Best Practices | SEO |
+|---|---|---|---|---|
+| Mobile | 87 | 100 | 100 | 100 |
+| Desktop | 98 | 100 | 100 | 100 |
+
+![Mobile Lighthouse results](./screen_shots/Screenshot%202026-09-19%20095533.png)
+![Desktop Lighthouse results](./screen_shots/Screenshot%202026-09-19%20095558.png)
+
 ## Credits
 
 All photography and project screenshots are my own. Typeface is
