@@ -43,7 +43,7 @@ async function loadRepos() {
     const repos = await res.json();
     console.log('Fetched GitHub repos:', repos);
     const topRepos = repos
-      .slice() // getting a shallow copy of the array
+      .slice() 
       .sort(( a, b) => new Date(b.updated_at) - new Date(a.updated_at))
       .slice(0, REPO_COUNT);
 
@@ -52,8 +52,7 @@ async function loadRepos() {
       return;
     }
     REPOS_CONTAINER.innerHTML = topRepos.map(renderRepoCard).join('');
-  } catch (error) {
-    console.error('Failed to load GitHub repos:', error);
+  } catch (erro) {
     REPOS_CONTAINER.innerHTML = `
       <p class="error-message" role="alert">
         Couldn't load live GitHub activity right now, you can view the
