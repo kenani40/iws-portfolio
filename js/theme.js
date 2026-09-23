@@ -14,12 +14,15 @@ function applyTheme(theme) {
   }
 }
 
+
 function getPreferredTheme() {
   const saved = localStorage.getItem(THEME_KEY);
   if (saved === 'dark' || saved === 'light') {
     return saved;
   }
 }
+
+
 
 applyTheme(getPreferredTheme());
 themeToggle.addEventListener('click', () => {
